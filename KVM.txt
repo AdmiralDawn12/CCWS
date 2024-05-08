@@ -1,0 +1,6 @@
+$egrp -c'(vmx|svm)'/proc/cpu info
+$ kvm -ok
+$ sudo apt install qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
+$ sudo systemctl enable --now libvirted
+$ sudo systemctl start libvirted
+$ sudo systemctl status libvirted
