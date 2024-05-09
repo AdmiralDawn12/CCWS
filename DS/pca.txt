@@ -1,0 +1,16 @@
+data_iris <- iris[1:4]
+cov_data <- cov(data_iris)
+cov_data
+eigen_data <- eigen(cov_data)
+eigen_data
+pca_data <- princomp(data_iris,cor='False')
+pca_data
+eigen_data $values
+pca_data $sdev^2
+pca_data $loading[,1:4]
+eigen_data $vectors
+summary(pca_data)
+mode12 = pca_data $loading[,1]
+mode12
+mode12_score <- as.matrix(data_iris) %*% mode12
+mode12_score
